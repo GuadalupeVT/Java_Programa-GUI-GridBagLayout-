@@ -4,14 +4,16 @@ import javax.swing.*;
 public class Prueba extends JFrame{
 	GridBagLayout gbl=new GridBagLayout();
 	GridBagConstraints gbc =new GridBagConstraints();
+	JPanel panel1 = new JPanel();
 	public Prueba() {
 		crearComponentes();
 	}
 	public void crearComponentes() {
 		//configuracion de ventana
 		
-		JPanel panel1 = new JPanel();
+		
 		panel1.setBackground(Color.WHITE);
+	    panel1.setLayout(gbl);
 		
 		getContentPane().setLayout(gbl);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -20,41 +22,73 @@ public class Prueba extends JFrame{
 		setLocationRelativeTo(null);
 		setVisible(true);
 		
+		metodoMagico(new JLabel("   "),0,0,1,1);
 		
 		Font fuente = new Font("Arial", 523, 14);
 		JLabel label1 = new JLabel("<html><p> The <b>Clasic Form</b> to includes all visible fields for <br> this list </p></html>");
 		label1.setFont(fuente);
-		metodoMagico(label1, 2, 2, 1,1);
+		metodoMagico(label1, 1, 0, 1,1);
 		
 		JLabel label2 = new JLabel("<html><br> Form options</html>");
 		label2.setFont(new Font("Arial", 523, 18));
-		metodoMagico(label2,2,5,1,1);
+		metodoMagico(label2,1,1,1,1);
 		
 		JLabel label3 = new JLabel("Include the following: ");
 		label3.setFont(fuente);
-		metodoMagico(label3,2,10,1,1);
+		metodoMagico(label3,1,2,1,1);
 		
 		JCheckBox caja1 = new JCheckBox("a little for your form");
 		caja1.setFont(fuente);
-		metodoMagico(caja1,2,15,1,1);
+		caja1.setBackground(Color.WHITE);
+		metodoMagico(caja1,1,3,1,1);
 		
 		JTextField textField1 =new JTextField("Subscribe to our mailing list");
 		textField1.setFont(fuente);
-		metodoMagico(textField1,2,20,1,1);
+		metodoMagico(textField1,1,4,1,1);
+		
+		metodoMagico(new JLabel(" "), 1, 5, 1, 1);
 		
 		ButtonGroup bg = new ButtonGroup();
 		JRadioButton rboton1 = new JRadioButton("only requiered fields");
 		bg.add(rboton1);
 		rboton1.setFont(fuente);
-        metodoMagico(rboton1,2,30,1,1);
+		rboton1.setBackground(Color.WHITE);
+        metodoMagico(rboton1,1,6,1,1);
 		
 		JRadioButton rboton2 = new JRadioButton("all fields");
 		bg.add(rboton2);
 		rboton2.setFont(fuente);
-		metodoMagico(rboton2,2,35,1,1);
+		rboton2.setBackground(Color.WHITE);
+		metodoMagico(rboton2,1,7,1,1);
 		
+		JLabel label4 = new JLabel("<html>(edit requiered fields in <a>the form builder</a>)</html>");
+		label4.setFont(fuente);
+		metodoMagico(label4, 1, 8, 1, 1);
 		
+		metodoMagico(new JLabel(" "), 1, 9, 1, 1);
 		
+		JCheckBox caja2 = new JCheckBox("interest group fields");
+		caja2.setFont(fuente);
+		caja2.setBackground(Color.WHITE);
+		metodoMagico(caja2,1,10,1,1);
+		
+		JCheckBox caja3 = new JCheckBox("requiered field indicators");
+		caja3.setFont(fuente);
+		caja3.setBackground(Color.WHITE);
+		metodoMagico(caja3,1,11,1,1);
+		
+		metodoMagico(new JLabel(" "),1,12,1,1);
+		
+		JLabel label7 = new JLabel("Set form width");
+		label7.setFont(fuente);
+		metodoMagico(label7,1,13,1,1);
+		
+		JTextField textField2=new JTextField();
+		metodoMagico(textField2,1,14,1,1);
+		
+		metodoMagico(new JLabel(" "),1,15,1,1);
+		
+		add(panel1);
 		pack();
 }
 	public void metodoMagico(JComponent componente,int x,int y, int width, int height) {
@@ -64,7 +98,7 @@ public class Prueba extends JFrame{
 	    gbc.gridheight=height;
 	    gbc.fill=GridBagConstraints.BOTH;
 	    gbl.setConstraints(componente, gbc);
-	    add(componente);
+	    panel1.add(componente);
 	}
 
 	public static void main(String[] args) {

@@ -4,6 +4,7 @@ import javax.swing.*;
 public class Prueba extends JFrame{
 	GridBagLayout gbl=new GridBagLayout();
 	GridBagConstraints gbc =new GridBagConstraints();
+	
 	JPanel panel1 = new JPanel();
 	public Prueba() {
 		crearComponentes();
@@ -19,7 +20,7 @@ public class Prueba extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBackground(Color.WHITE);
 		setTitle("Registro");
-		setLocationRelativeTo(null);
+		//setLocationRelativeTo(null);
 		setVisible(true);
 		
 		metodoMagico(new JLabel("   "),0,0,1,1);
@@ -61,7 +62,7 @@ public class Prueba extends JFrame{
 		rboton2.setBackground(Color.WHITE);
 		metodoMagico(rboton2,1,7,1,1);
 		
-		JLabel label4 = new JLabel("<html>(edit requiered fields in <a>the form builder</a>)</html>");
+		JLabel label4 = new JLabel("<html>(edit requiered fields in <font color=\"blue\">the form builder</font>)</html>");
 		label4.setFont(fuente);
 		metodoMagico(label4, 1, 8, 1, 1);
 		
@@ -87,6 +88,30 @@ public class Prueba extends JFrame{
 		metodoMagico(textField2,1,14,1,1);
 		
 		metodoMagico(new JLabel(" "),1,15,1,1);
+		
+		JLabel label8 = new JLabel("Enhance your form");
+		label8.setFont(fuente);
+		metodoMagico(label8,1,16,1,1);
+		
+		JCheckBox caja4 = new JCheckBox("<html>enable <b>evil</b> popup mode </html>");
+		caja4.setBackground(Color.WHITE);
+		caja4.setFont(fuente);
+		metodoMagico(caja4,1,17,1,1);
+		
+		JCheckBox caja5 = new JCheckBox("<html>disable all <b>JavaScript</b></html>");
+		caja5.setBackground(Color.WHITE);
+		caja5.setFont(fuente);
+		metodoMagico(caja5,1,18,1,1);
+		
+		JCheckBox caja6 = new JCheckBox("include archive link");
+		caja6.setBackground(Color.WHITE);
+		caja6.setFont(fuente);
+		metodoMagico(caja6,1,19,1,1);
+		
+		JCheckBox caja7 = new JCheckBox("<html>include<font color=\"blue\"> MonkeyRewards</font></html>");
+		caja7.setBackground(Color.WHITE);
+		caja7.setFont(fuente);
+		metodoMagico(caja7,1,20,1,1);
 		
 		add(panel1);
 		pack();

@@ -1,11 +1,15 @@
 import java.awt.*;
+import java.text.ParseException;
+
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
 
 public class Prueba extends JFrame{
 	GridBagLayout gbl=new GridBagLayout();
 	GridBagConstraints gbc =new GridBagConstraints();
 	
 	JPanel panel1 = new JPanel();
+	JPanel panel3 = new JPanel();
 	public Prueba() {
 		crearComponentes();
 	}
@@ -119,6 +123,31 @@ public class Prueba extends JFrame{
 		label10.setFont(new Font("Arial", 523, 18));
 		metodoMagico(label10,3,0,1,1);
 		
+		JLabel label11 = new JLabel("<html><font color=\"white\">.....................................................</font><font color=\"red\">* </font>indicates required</html>");
+		label11.setFont(fuente);
+		label1.setAlignmentX(LEFT_ALIGNMENT);
+		metodoMagico2(label11,0,0,1,1);
+		
+		JLabel label12 = new JLabel("Email Address");
+		label12.setFont(fuente);
+		metodoMagico2(label12,0,1,1,1);
+		
+		try {
+			MaskFormatter mfCC = new MaskFormatter("##################################@gmail.com                                                     ");
+			mfCC.setPlaceholderCharacter(' ');
+			JFormattedTextField cajaEmail=new JFormattedTextField(mfCC);
+			cajaEmail.setSize(50, 1);
+			cajaEmail.setEditable(true);
+			cajaEmail.setEnabled(true);
+			metodoMagico2(cajaEmail,0,2,1,1);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		panel3.setLayout(gbl);
+		metodoMagico(panel3,3,1,1,1);
+		
+		
 		add(panel1);
 		pack();
 }
@@ -130,6 +159,16 @@ public class Prueba extends JFrame{
 	    gbc.fill=GridBagConstraints.BOTH;
 	    gbl.setConstraints(componente, gbc);
 	    panel1.add(componente);
+	}
+	
+	public void metodoMagico2(JComponent componente,int x,int y, int width, int height) {
+		gbc.gridx=x;
+		gbc.gridy=y;
+		gbc.gridwidth=width;
+	    gbc.gridheight=height;
+	    gbc.fill=GridBagConstraints.BOTH;
+	    gbl.setConstraints(componente, gbc);
+	    panel3.add(componente);
 	}
 
 	public static void main(String[] args) {

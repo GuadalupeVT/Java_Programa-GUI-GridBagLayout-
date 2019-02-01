@@ -144,6 +144,13 @@ public class Prueba extends JFrame{
 			e.printStackTrace();
 		}
 		
+		JLabel label14 = new JLabel("First Name");
+		label14.setFont(fuente);
+	    metodoMagico2(label14, 0, 3, 1, 1);
+	    
+	    JTextField cajaFN = new JTextField(30);
+	    metodoMagico2(cajaFN, 0, 4, 1, 1);
+		
 		panel3.setLayout(gbl);
 		metodoMagico(panel3,3,1,1,1);
 		

@@ -173,14 +173,20 @@ public class Prueba extends JFrame{
 		panel3.setLayout(gbl);
 		panel3.setBackground(Color.WHITE);
 		JScrollPane scroll = new JScrollPane(panel3);
-		metodoMagico(scroll,3,1,1,1);
+		metodoMagico(scroll,3,1,1,8);
 		
 		metodoMagico(new JLabel("   "),4,1,1,1);
 		
 		JLabel label16 = new JLabel("Copy/Paste onto your site");
 		label16.setFont(new Font("Arial", 523, 17));
-		metodoMagico(new JLabel("   "),3,2,1,1);
-		metodoMagico(label16,3,3,1,1);
+		metodoMagico(new JLabel("   "),3,9,1,1);
+		metodoMagico(label16,3,10,1,1);
+		
+		JTextArea copy = new JTextArea(" <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1w7OgIMMRc4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe> ");
+		copy.setLineWrap(true);
+		copy.setWrapStyleWord(true);
+		copy.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+		metodoMagico(copy,3,11,1,5);
 		
 		add(panel1);
 		pack();
@@ -190,7 +196,7 @@ public class Prueba extends JFrame{
 		gbc.gridy=y;
 		gbc.gridwidth=width;
 	    gbc.gridheight=height;
-	    //gbc.fill=GridBagConstraints.BOTH;
+	    gbc.fill=GridBagConstraints.BOTH;
 	    gbl.setConstraints(componente, gbc);
 	    panel1.add(componente);
 	}

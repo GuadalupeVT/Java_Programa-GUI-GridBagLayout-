@@ -151,9 +151,16 @@ public class Prueba extends JFrame{
 	    JTextField cajaFN = new JTextField(30);
 	    metodoMagico2(cajaFN, 0, 4, 1, 1);
 		
+	    JLabel label15 = new JLabel("Last Name");
+	    label15.setFont(fuente);
+	    metodoMagico2(label15, 0, 5, 1, 1);
+	    
+	    JTextField cajaLN = new JTextField(30);
+	    metodoMagico2(cajaLN, 0, 6, 1, 1);
+	    
+	    
 		panel3.setLayout(gbl);
-		metodoMagico(panel3,3,1,1,1);
-		
+		metodoMagico(panel3,3,1,1,1);	
 		
 		add(panel1);
 		pack();

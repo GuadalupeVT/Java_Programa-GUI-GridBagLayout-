@@ -102,12 +102,13 @@ public class Prueba extends JFrame{
 		caja4.setFont(fuente);
 		metodoMagico(caja4,1,17,1,1);
 		
-		JCheckBox caja5 = new JCheckBox("<html>disable all <b>JavaScript</b></html>");
+
+		JCheckBox caja5 = new JCheckBox("<html>disable all <b>JavaScript  </b>     <u> i Info</u></html>");
 		caja5.setBackground(Color.WHITE);
 		caja5.setFont(fuente);
 		metodoMagico(caja5,1,18,1,1);
 		
-		JCheckBox caja6 = new JCheckBox("include archive link");
+		JCheckBox caja6 = new JCheckBox("<html>include archive link  <u> i Info</u></html>");
 		caja6.setBackground(Color.WHITE);
 		caja6.setFont(fuente);
 		metodoMagico(caja6,1,19,1,1);

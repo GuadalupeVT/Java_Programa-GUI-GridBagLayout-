@@ -113,6 +113,12 @@ public class Prueba extends JFrame{
 		caja7.setFont(fuente);
 		metodoMagico(caja7,1,20,1,1);
 		
+		metodoMagico(new JLabel("           "),2,0,1,1);
+		
+		JLabel label10 = new JLabel("Preview");
+		label10.setFont(new Font("Arial", 523, 18));
+		metodoMagico(label10,3,0,1,1);
+		
 		add(panel1);
 		pack();
 }

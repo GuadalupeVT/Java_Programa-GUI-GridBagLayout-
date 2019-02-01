@@ -158,9 +158,29 @@ public class Prueba extends JFrame{
 	    JTextField cajaLN = new JTextField(30);
 	    metodoMagico2(cajaLN, 0, 6, 1, 1);
 	    
+	    ImageIcon imagen= new ImageIcon("./src/logo.png");
+	    ImageIcon imagen2=new ImageIcon(imagen.getImage().getScaledInstance(200, -1, Image.SCALE_DEFAULT));
+	    
+	    metodoMagico2(new JLabel("  "),0,7,1,1);
+	    
+	    JButton btn1 = new JButton();
+	    btn1.setIcon(imagen2);
+	    btn1.setPreferredSize(new Dimension(2,35));
+		btn1.setBackground(Color.WHITE);
+		metodoMagico2(btn1,0,8,1,1);
+	    
 	    
 		panel3.setLayout(gbl);
-		metodoMagico(panel3,3,1,1,1);	
+		panel3.setBackground(Color.WHITE);
+		JScrollPane scroll = new JScrollPane(panel3);
+		metodoMagico(scroll,3,1,1,1);
+		
+		metodoMagico(new JLabel("   "),4,1,1,1);
+		
+		JLabel label16 = new JLabel("Copy/Paste onto your site");
+		label16.setFont(new Font("Arial", 523, 17));
+		metodoMagico(new JLabel("   "),3,2,1,1);
+		metodoMagico(label16,3,3,1,1);
 		
 		add(panel1);
 		pack();
@@ -170,7 +190,7 @@ public class Prueba extends JFrame{
 		gbc.gridy=y;
 		gbc.gridwidth=width;
 	    gbc.gridheight=height;
-	    gbc.fill=GridBagConstraints.BOTH;
+	    //gbc.fill=GridBagConstraints.BOTH;
 	    gbl.setConstraints(componente, gbc);
 	    panel1.add(componente);
 	}
